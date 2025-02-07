@@ -47,6 +47,31 @@ namespace CarBookProje.Persistence.Migrations
                     b.ToTable("Abouts");
                 });
 
+            modelBuilder.Entity("UCarBook.Domain.Entities.Author", b =>
+                {
+                    b.Property<int>("AuthorID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AuthorID"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AuthorID");
+
+                    b.ToTable("Authors");
+                });
+
             modelBuilder.Entity("UCarBook.Domain.Entities.Banner", b =>
                 {
                     b.Property<int>("BannerID")
@@ -74,6 +99,42 @@ namespace CarBookProje.Persistence.Migrations
                     b.HasKey("BannerID");
 
                     b.ToTable("Banners");
+                });
+
+            modelBuilder.Entity("UCarBook.Domain.Entities.Blog", b =>
+                {
+                    b.Property<int>("BlogID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BlogID"));
+
+                    b.Property<int>("AuthorID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("AuthorName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CategoryID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CoverImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("BlogID");
+
+                    b.HasIndex("AuthorID");
+
+                    b.HasIndex("CategoryID");
+
+                    b.ToTable("Blogs");
                 });
 
             modelBuilder.Entity("UCarBook.Domain.Entities.Brand", b =>
@@ -422,6 +483,25 @@ namespace CarBookProje.Persistence.Migrations
                     b.ToTable("Testimonials");
                 });
 
+            modelBuilder.Entity("UCarBook.Domain.Entities.Blog", b =>
+                {
+                    b.HasOne("UCarBook.Domain.Entities.Author", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("UCarBook.Domain.Entities.Category", "Category")
+                        .WithMany("Blogs")
+                        .HasForeignKey("CategoryID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+
+                    b.Navigation("Category");
+                });
+
             modelBuilder.Entity("UCarBook.Domain.Entities.Car", b =>
                 {
                     b.HasOne("UCarBook.Domain.Entities.Brand", "Brand")
@@ -494,6 +574,11 @@ namespace CarBookProje.Persistence.Migrations
                     b.Navigation("CarFeatures");
 
                     b.Navigation("CarPricings");
+                });
+
+            modelBuilder.Entity("UCarBook.Domain.Entities.Category", b =>
+                {
+                    b.Navigation("Blogs");
                 });
 
             modelBuilder.Entity("UCarBook.Domain.Entities.Feature", b =>

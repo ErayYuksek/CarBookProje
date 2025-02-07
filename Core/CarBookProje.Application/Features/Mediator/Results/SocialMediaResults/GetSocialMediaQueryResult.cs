@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace CarBookProje.Application.Features.Mediator.Results.SocialMediaResults
 {
-    internal class GetSocialMediaQueryResult
+    public class GetSocialMediaQueryResult
     {
+        public int SocialMediaID { get; set; }
+        public string Name { get; set; }
+        public string Url { get; set; }
+
+        public string Icon { get; set; }
     }
 }

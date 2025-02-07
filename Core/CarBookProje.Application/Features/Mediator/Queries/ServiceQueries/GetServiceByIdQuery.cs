@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CarBookProje.Application.Features.Mediator.Results.ServiceResults;
+using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +8,13 @@ using System.Threading.Tasks;
 
 namespace CarBookProje.Application.Features.Mediator.Queries.ServiceQueries
 {
-    internal class GetServiceByIdQuery
+    public class GetServiceByIdQuery:IRequest<GetServiceByIdQueryResult>
     {
+        public GetServiceByIdQuery(int ıd)
+        {
+            Id = ıd;
+        }
+
+        public int Id  { get; set; }
     }
 }

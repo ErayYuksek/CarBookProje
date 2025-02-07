@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace CarBookProje.Application.Features.Mediator.Results.ServiceResults
 {
-    internal class GetServiceByIdQueryResult
+    public class GetServiceByIdQueryResult
     {
+        public int ServiceID { get; set; }
+
+        public string Title { get; set; }
+
+        public string Desciription { get; set; }
+
+        public string IconUrl { get; set; }
     }
 }

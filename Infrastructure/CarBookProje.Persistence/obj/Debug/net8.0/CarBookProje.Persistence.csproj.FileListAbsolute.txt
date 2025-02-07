@@ -17,3 +17,4 @@ C:\Users\erayy\source\repos\CarBookProje\Infrastructure\CarBookProje.Persistence
 C:\Users\erayy\source\repos\CarBookProje\Infrastructure\CarBookProje.Persistence\obj\Debug\net8.0\ref\CarBookProje.Persistence.dll
 C:\Users\erayy\source\repos\CarBookProje\Infrastructure\CarBookProje.Persistence\bin\Debug\net8.0\CarBookProje.Application.dll
 C:\Users\erayy\source\repos\CarBookProje\Infrastructure\CarBookProje.Persistence\bin\Debug\net8.0\CarBookProje.Application.pdb
+C:\Users\erayy\source\repos\CarBookProje\Infrastructure\CarBookProje.Persistence\obj\Debug\net8.0\CarBookProje.Persistence.sourcelink.json

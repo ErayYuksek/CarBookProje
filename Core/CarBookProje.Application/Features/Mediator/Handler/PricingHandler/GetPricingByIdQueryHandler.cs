@@ -11,7 +11,7 @@ using UCarBook.Domain.Entities;
 
 namespace CarBookProje.Application.Features.Mediator.Handler.PricingHandler
 {
-    public class GetPricingByIdQueryHandler : IRequestHandler<GetPricingByIdQuery, GetPricingQueryResult>
+    public class GetPricingByIdQueryHandler : IRequestHandler<GetPricingByIdQuery, GetPricingByIdQueryResult>
     {
         private readonly IRepository<Pricing> _repository;
 
@@ -20,13 +20,13 @@ namespace CarBookProje.Application.Features.Mediator.Handler.PricingHandler
             _repository = repository;
         }
 
-        public async Task<GetPricingQueryResult> Handle(GetPricingByIdQuery request, CancellationToken cancellationToken)
+        public async Task<GetPricingByIdQueryResult> Handle(GetPricingByIdQuery request, CancellationToken cancellationToken)
         {
-            var values=await _repository.GetByIdAsync(request.Id);
-            return new GetPricingQueryResult
+            var values = await _repository.GetByIdAsync(request.Id);
+            return new GetPricingByIdQueryResult
             {
                 PricingID = values.PricingID,
-                Name = values.Name,
+                Name = values.Name
             };
         }
     }

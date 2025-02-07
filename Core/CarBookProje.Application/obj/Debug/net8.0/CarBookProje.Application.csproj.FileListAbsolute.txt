@@ -13,3 +13,4 @@ C:\Users\erayy\source\repos\CarBookProje\Core\CarBookProje.Application\bin\Debug
 C:\Users\erayy\source\repos\CarBookProje\Core\CarBookProje.Application\bin\Debug\net8.0\UCarBook.Domain.pdb
 C:\Users\erayy\source\repos\CarBookProje\Core\CarBookProje.Application\obj\Debug\net8.0\CarBookProje.Application.csproj.AssemblyReference.cache
 C:\Users\erayy\source\repos\CarBookProje\Core\CarBookProje.Application\obj\Debug\net8.0\CarBookP.8A4B62BE.Up2Date
+C:\Users\erayy\source\repos\CarBookProje\Core\CarBookProje.Application\obj\Debug\net8.0\CarBookProje.Application.sourcelink.json

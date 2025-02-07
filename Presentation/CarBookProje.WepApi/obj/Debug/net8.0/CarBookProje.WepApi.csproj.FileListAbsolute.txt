@@ -174,3 +174,4 @@ C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\De
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\CarBookProje.Application.pdb
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\MediatR.dll
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\CarBookProje.WepApi.sourcelink.json

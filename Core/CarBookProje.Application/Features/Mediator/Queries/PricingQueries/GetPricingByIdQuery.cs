@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CarBookProje.Application.Features.Mediator.Queries.PricingQueries
 {
-    public class GetPricingByIdQuery:IRequest<GetPricingQueryResult>
+    public class GetPricingByIdQuery:IRequest<GetPricingByIdQueryResult>
     {
         public GetPricingByIdQuery(int ıd)
         {
