@@ -1,8 +1,11 @@
+# Visual Studio ile alakalý dosyalarý yok say
 .vs/
-bin/
 obj/
+bin/
+**/obj/
+**/bin/
 *.user
 *.suo
 *.cache
 *.pdb
-/.gitignore
+*.dll
