@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\erayy\\source\\repos\\CarBookProje\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5F8CE6D0-93DF-446A-A45B-9A8158124DA6}|Core\\CarBookProje.Application\\CarBookProje.Application.csproj|c:\\users\\erayy\\source\\repos\\carbookproje\\core\\carbookproje.application\\features\\mediator\\handler\\bloghandler\\getlast3blogswithauthorqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F8CE6D0-93DF-446A-A45B-9A8158124DA6}|Core\\CarBookProje.Application\\CarBookProje.Application.csproj|solutionrelative:core\\carbookproje.application\\features\\mediator\\handler\\bloghandler\\getlast3blogswithauthorqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F8CE6D0-93DF-446A-A45B-9A8158124DA6}|Core\\CarBookProje.Application\\CarBookProje.Application.csproj|c:\\users\\erayy\\source\\repos\\carbookproje\\core\\carbookproje.application\\features\\mediator\\queries\\blogqueries\\getlast3blogswithauthorquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F8CE6D0-93DF-446A-A45B-9A8158124DA6}|Core\\CarBookProje.Application\\CarBookProje.Application.csproj|solutionrelative:core\\carbookproje.application\\features\\mediator\\queries\\blogqueries\\getlast3blogswithauthorquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F8CE6D0-93DF-446A-A45B-9A8158124DA6}|Core\\CarBookProje.Application\\CarBookProje.Application.csproj|c:\\users\\erayy\\source\\repos\\carbookproje\\core\\carbookproje.application\\features\\mediator\\results\\blogresults\\getlast3blogswithauthorqueryresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F8CE6D0-93DF-446A-A45B-9A8158124DA6}|Core\\CarBookProje.Application\\CarBookProje.Application.csproj|solutionrelative:core\\carbookproje.application\\features\\mediator\\results\\blogresults\\getlast3blogswithauthorqueryresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69D21678-AB99-4FA4-9B91-49363E8CB286}|Solution Items{69D21678-AB99-4FA4-9B91-49363E8CB286}|C:\\Users\\erayy\\source\\repos\\CarBookProje\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{69D21678-AB99-4FA4-9B91-49363E8CB286}|Solution Items{69D21678-AB99-4FA4-9B91-49363E8CB286}|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,34 +14,8 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GetLast3BlogsWithAuthorQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\erayy\\source\\repos\\CarBookProje\\Core\\CarBookProje.Application\\Features\\Mediator\\Handler\\BlogHandler\\GetLast3BlogsWithAuthorQueryHandler.cs",
-              "RelativeDocumentMoniker": "Core\\CarBookProje.Application\\Features\\Mediator\\Handler\\BlogHandler\\GetLast3BlogsWithAuthorQueryHandler.cs",
-              "ToolTip": "C:\\Users\\erayy\\source\\repos\\CarBookProje\\Core\\CarBookProje.Application\\Features\\Mediator\\Handler\\BlogHandler\\GetLast3BlogsWithAuthorQueryHandler.cs",
-              "RelativeToolTip": "Core\\CarBookProje.Application\\Features\\Mediator\\Handler\\BlogHandler\\GetLast3BlogsWithAuthorQueryHandler.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T14:23:30.983Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GetLast3BlogsWithAuthorQuery.cs",
-              "DocumentMoniker": "C:\\Users\\erayy\\source\\repos\\CarBookProje\\Core\\CarBookProje.Application\\Features\\Mediator\\Queries\\BlogQueries\\GetLast3BlogsWithAuthorQuery.cs",
-              "RelativeDocumentMoniker": "Core\\CarBookProje.Application\\Features\\Mediator\\Queries\\BlogQueries\\GetLast3BlogsWithAuthorQuery.cs",
-              "ToolTip": "C:\\Users\\erayy\\source\\repos\\CarBookProje\\Core\\CarBookProje.Application\\Features\\Mediator\\Queries\\BlogQueries\\GetLast3BlogsWithAuthorQuery.cs",
-              "RelativeToolTip": "Core\\CarBookProje.Application\\Features\\Mediator\\Queries\\BlogQueries\\GetLast3BlogsWithAuthorQuery.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T14:20:40.56Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -60,15 +26,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GetLast3BlogsWithAuthorQueryResult.cs",
-              "DocumentMoniker": "C:\\Users\\erayy\\source\\repos\\CarBookProje\\Core\\CarBookProje.Application\\Features\\Mediator\\Results\\BlogResults\\GetLast3BlogsWithAuthorQueryResult.cs",
-              "RelativeDocumentMoniker": "Core\\CarBookProje.Application\\Features\\Mediator\\Results\\BlogResults\\GetLast3BlogsWithAuthorQueryResult.cs",
-              "ToolTip": "C:\\Users\\erayy\\source\\repos\\CarBookProje\\Core\\CarBookProje.Application\\Features\\Mediator\\Results\\BlogResults\\GetLast3BlogsWithAuthorQueryResult.cs",
-              "RelativeToolTip": "Core\\CarBookProje.Application\\Features\\Mediator\\Results\\BlogResults\\GetLast3BlogsWithAuthorQueryResult.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T14:23:03.544Z",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\erayy\\source\\repos\\CarBookProje\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\erayy\\source\\repos\\CarBookProje\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001407|",
+              "WhenOpened": "2025-03-06T08:58:42.992Z",
               "EditorCaption": ""
             }
           ]

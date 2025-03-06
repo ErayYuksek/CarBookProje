@@ -8,6 +8,8 @@ C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\De
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\Humanizer.dll
+C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\MediatR.dll
+C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\MediatR.Contracts.dll
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\Microsoft.Build.Locator.dll
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
@@ -145,9 +147,11 @@ C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\De
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\CarBookProje.Application.dll
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\CarBookProje.Persistence.dll
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\UCarBook.Domain.dll
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\CarBookProje.Persistence.pdb
+C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\CarBookProje.Application.pdb
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\UCarBook.Domain.pdb
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\CarBookProje.WepApi.csproj.AssemblyReference.cache
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\CarBookProje.WepApi.GeneratedMSBuildEditorConfig.editorconfig
@@ -156,6 +160,8 @@ C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\De
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\CarBookProje.WepApi.csproj.CoreCompileInputs.cache
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\CarBookProje.WepApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\CarBookProje.WepApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\CarBookProje.WepApi.sourcelink.json
+C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\scopedcss\bundle\CarBookProje.WepApi.styles.css
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\staticwebassets\msbuild.CarBookProje.WepApi.Microsoft.AspNetCore.StaticWebAssets.props
@@ -163,15 +169,9 @@ C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\De
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.CarBookProje.WepApi.props
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.CarBookProje.WepApi.props
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\scopedcss\bundle\CarBookProje.WepApi.styles.css
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\CarBookP.7FF2B52C.Up2Date
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\CarBookProje.WepApi.dll
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\refint\CarBookProje.WepApi.dll
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\CarBookProje.WepApi.pdb
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\CarBookProje.WepApi.genruntimeconfig.cache
 C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\ref\CarBookProje.WepApi.dll
-C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\CarBookProje.Application.dll
-C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\CarBookProje.Application.pdb
-C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\MediatR.dll
-C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\bin\Debug\net8.0\MediatR.Contracts.dll
-C:\Users\erayy\source\repos\CarBookProje\Presentation\CarBookProje.WepApi\obj\Debug\net8.0\CarBookProje.WepApi.sourcelink.json

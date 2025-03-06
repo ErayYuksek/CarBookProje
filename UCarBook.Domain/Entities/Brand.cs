@@ -10,8 +10,8 @@ namespace UCarBook.Domain.Entities
     public class Brand
     {
         public int BrandID { get; set; }
-        public string BrandName { get; set; }
+        public string BrandName { get; set; } = string.Empty;
 
-        public List<Car> Cars { get; set; }
+		public List<Car> Cars { get; set; }
     }
 }

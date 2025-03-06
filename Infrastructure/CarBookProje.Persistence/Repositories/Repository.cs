@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UCarBook.Domain.Entities;
 
 namespace CarBookProje.Persistence.Repositories
 {
@@ -34,6 +35,7 @@ namespace CarBookProje.Persistence.Repositories
         {
             return await _context.Set<T>().FindAsync(id);
         }
+
 
         public async Task RemoveAsync(T entity)
         {

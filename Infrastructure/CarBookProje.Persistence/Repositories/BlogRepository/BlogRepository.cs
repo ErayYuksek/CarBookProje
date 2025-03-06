@@ -19,6 +19,20 @@ namespace CarBookProje.Persistence.Repositories.BlogRepository
             _context = context;
         }
 
+		public List<Blog> GetAllBlogWithAuthors()
+		{
+		 var values=_context.Blogs.Include(x => x.Author).ToList(); 
+            return values;
+		}
+
+        public List<Blog> GetBlogByAuthorId(int id)
+        {
+          var  values = _context.Blogs.Include(x => x.Author).Where(x => x.BlogID == id).ToList();
+            return values;
+        }
+
+        //Bu kod Entity Framework Core(EF Core) kullanarak Blog tablosundaki tüm kayıtları yazar bilgileriyle birlikte çekiyor.
+
         public async Task<List<Blog>> GetLast3BlogsWithAuthors()
 
         {

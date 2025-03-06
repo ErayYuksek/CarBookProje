@@ -9,11 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using UCarBook.Domain.Entities;
 
-namespace CarBookProje.Application.Features.Mediator.Handler.BlogHandler
+namespace CarBook.Application.Features.Mediator.Handlers.BlogHandlers
 {
     public class GetBlogByIdQueryHandler : IRequestHandler<GetBlogByIdQuery, GetBlogByIdQueryResult>
     {
-
         private readonly IRepository<Blog> _repository;
 
         public GetBlogByIdQueryHandler(IRepository<Blog> repository)
@@ -23,7 +22,25 @@ namespace CarBookProje.Application.Features.Mediator.Handler.BlogHandler
 
         public async Task<GetBlogByIdQueryResult> Handle(GetBlogByIdQuery request, CancellationToken cancellationToken)
         {
-            var values = await _repository.GetByIdAsync(request.İd);
+            Console.WriteLine($"Gelen Blog ID: {request.BlogID}");
+
+            if (request.BlogID == 0)
+            {
+                throw new Exception("HATA: Gelen Blog ID geçersiz! (0)");
+            }
+
+            if (request.BlogID == null)
+            {
+                throw new Exception("HATA: Blog ID NULL geldi!");
+            }
+
+            var values = await _repository.GetByIdAsync(request.BlogID);
+
+            if (values == null)
+            {
+                throw new Exception($"HATA: Veritabanında Blog bulunamadı! BlogID: {request.BlogID}");
+            }
+
             return new GetBlogByIdQueryResult
             {
                 AuthorID = values.AuthorID,
@@ -32,8 +49,10 @@ namespace CarBookProje.Application.Features.Mediator.Handler.BlogHandler
                 CoverImageUrl = values.CoverImageUrl,
                 CreatedDate = values.CreatedDate,
                 Title = values.Title,
-             
+                Description = values.Description
+
             };
         }
+
     }
 }

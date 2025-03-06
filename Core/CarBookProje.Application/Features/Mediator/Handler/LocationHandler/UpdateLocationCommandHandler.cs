@@ -10,11 +10,11 @@ using UCarBook.Domain.Entities;
 
 namespace CarBookProje.Application.Features.Mediator.Handler.LocationHandler
 {
-    public class UpdateLocationCommandHandler : IRequestHandler<UpdateLocationCommand, Unit>
+    public class UpdateTagCloudCommandHandler : IRequestHandler<UpdateLocationCommand, Unit>
     {
         private readonly IRepository<Location> _repository;
 
-        public UpdateLocationCommandHandler(IRepository<Location> repository)
+        public UpdateTagCloudCommandHandler(IRepository<Location> repository)
         {
             _repository = repository;
         }

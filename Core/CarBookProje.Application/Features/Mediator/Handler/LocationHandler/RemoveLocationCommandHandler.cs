@@ -12,11 +12,11 @@ using UCarBook.Domain.Entities;
 
 namespace CarBookProje.Application.Features.Mediator.Handler.LocationHandler
 {
-    public class RemoveLocationCommandHandler : IRequestHandler<RemoveLocationCommand, Unit>
+    public class RemoveTagCloudCommandHandler : IRequestHandler<RemoveLocationCommand, Unit>
     {
         private readonly IRepository<Location> _repository;
 
-        public RemoveLocationCommandHandler(IRepository<Location> repository)
+        public RemoveTagCloudCommandHandler(IRepository<Location> repository)
         {
             _repository = repository;
         }

@@ -17,19 +17,21 @@ namespace CarBookProje.WepApi.Controllers
         private readonly RemoveCarCommandHandler _removeCarCommandHandler;
         private readonly GetCarWithBrandQueryHandler _getCarWithBrandQueryHandler;
         private readonly GetLast5CarsWithBrandQueryHandler _getlast5CarsWithBrandQueryHandler;
+     
 
-        public CarController(GetCarQueryHandler getCarQueryHandler, GetCarByIdQueryHandler getCarByIdQueryHandler, CreateCarCommandHandler createCarCommandHandler, UpdateCarCommandHandler updateCarCommandHandler, RemoveCarCommandHandler removeCarCommandHandler, GetCarWithBrandQueryHandler getCarWithBrandQueryHandler, GetLast5CarsWithBrandQueryHandler getlast5CarsWithBrandQueryHandler)
-        {
-            _getCarQueryHandler = getCarQueryHandler;
-            _getCarByIdQueryHandler = getCarByIdQueryHandler;
-            _createCarCommandHandler = createCarCommandHandler;
-            _updateCarCommandHandler = updateCarCommandHandler;
-            _removeCarCommandHandler = removeCarCommandHandler;
-            _getCarWithBrandQueryHandler = getCarWithBrandQueryHandler;
-            _getlast5CarsWithBrandQueryHandler = getlast5CarsWithBrandQueryHandler;
-        }
+		public CarController(GetCarQueryHandler getCarQueryHandler, GetCarByIdQueryHandler getCarByIdQueryHandler, CreateCarCommandHandler createCarCommandHandler, UpdateCarCommandHandler updateCarCommandHandler, RemoveCarCommandHandler removeCarCommandHandler, GetCarWithBrandQueryHandler getCarWithBrandQueryHandler, GetLast5CarsWithBrandQueryHandler getlast5CarsWithBrandQueryHandler)
+		{
+			_getCarQueryHandler = getCarQueryHandler;
+			_getCarByIdQueryHandler = getCarByIdQueryHandler;
+			_createCarCommandHandler = createCarCommandHandler;
+			_updateCarCommandHandler = updateCarCommandHandler;
+			_removeCarCommandHandler = removeCarCommandHandler;
+			_getCarWithBrandQueryHandler = getCarWithBrandQueryHandler;
+			_getlast5CarsWithBrandQueryHandler = getlast5CarsWithBrandQueryHandler;
+		
+		}
 
-        [HttpGet]
+		[HttpGet]
          
         public async Task<IActionResult> Carlist()
         {
@@ -88,5 +90,7 @@ namespace CarBookProje.WepApi.Controllers
             var values = _getlast5CarsWithBrandQueryHandler.Handle();
             return Ok(values);
         }
-    }
+
+	
+	}
 }

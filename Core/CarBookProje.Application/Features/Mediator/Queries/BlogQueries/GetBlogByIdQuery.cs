@@ -12,9 +12,9 @@ namespace CarBookProje.Application.Features.Mediator.Queries.BlogQueries
     {
         public GetBlogByIdQuery(int id)
         {
-            İd = id;
+            BlogID = id;
         }
-
-        public int İd { get; set; }
+ 
+        public int BlogID { get; set; }
     }
 }

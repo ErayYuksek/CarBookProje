@@ -5,8 +5,8 @@ C:\Users\erayy\source\repos\CarBookProje\UCarBook.Domain\obj\Debug\net8.0\UCarBo
 C:\Users\erayy\source\repos\CarBookProje\UCarBook.Domain\obj\Debug\net8.0\UCarBook.Domain.AssemblyInfoInputs.cache
 C:\Users\erayy\source\repos\CarBookProje\UCarBook.Domain\obj\Debug\net8.0\UCarBook.Domain.AssemblyInfo.cs
 C:\Users\erayy\source\repos\CarBookProje\UCarBook.Domain\obj\Debug\net8.0\UCarBook.Domain.csproj.CoreCompileInputs.cache
+C:\Users\erayy\source\repos\CarBookProje\UCarBook.Domain\obj\Debug\net8.0\UCarBook.Domain.sourcelink.json
 C:\Users\erayy\source\repos\CarBookProje\UCarBook.Domain\obj\Debug\net8.0\UCarBook.Domain.dll
 C:\Users\erayy\source\repos\CarBookProje\UCarBook.Domain\obj\Debug\net8.0\refint\UCarBook.Domain.dll
 C:\Users\erayy\source\repos\CarBookProje\UCarBook.Domain\obj\Debug\net8.0\UCarBook.Domain.pdb
 C:\Users\erayy\source\repos\CarBookProje\UCarBook.Domain\obj\Debug\net8.0\ref\UCarBook.Domain.dll
-C:\Users\erayy\source\repos\CarBookProje\UCarBook.Domain\obj\Debug\net8.0\UCarBook.Domain.sourcelink.json

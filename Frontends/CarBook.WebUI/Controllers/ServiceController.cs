@@ -4,11 +4,11 @@ namespace CarBook.WebUI.Controllers
 {
     public class ServiceController : Controller
     {
-
         public IActionResult Index()
         {
-
-            return View();
+			ViewBag.v1 = "Servicess";
+			ViewBag.v2 = "Our Servicess";
+			return View();
         }
     }
 }

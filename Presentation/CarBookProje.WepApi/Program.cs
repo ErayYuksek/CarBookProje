@@ -1,17 +1,21 @@
-using CarBookProje.Application.Features.CQRS.Handlers.AboutHandler;
+ using CarBookProje.Application.Features.CQRS.Handlers.AboutHandler;
 using CarBookProje.Application.Features.CQRS.Handlers.BannerHandler;
 using CarBookProje.Application.Features.CQRS.Handlers.CarHandler;
 using CarBookProje.Application.Features.CQRS.Handlers.CategoryHandler;
 using CarBookProje.Application.Features.CQRS.Handlers.ContactHandler;
 using CarBookProje.Application.Features.CQRS.Queries.AboutQueries;
+using CarBookProje.Application.Features.RepositoryPattern;
 using CarBookProje.Application.Interfaces;
 using CarBookProje.Application.Interfaces.BlogInterfaces;
 using CarBookProje.Application.Interfaces.CarÝnterfaces;
+using CarBookProje.Application.Interfaces.CarPricingInterfaces;
 using CarBookProje.Application.Services;
 using CarBookProje.Persistence.Context;
 using CarBookProje.Persistence.Repositories;
 using CarBookProje.Persistence.Repositories.BlogRepository;
+using CarBookProje.Persistence.Repositories.CarPricingRepository;
 using CarBookProje.Persistence.Repositories.CarRepositories;
+using CarBookProje.Persistence.Repositories.CommentRepositories;
 using UCarBook.Domain.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +27,10 @@ builder.Services.AddScoped<CarBookContext>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped(typeof(ICarRepository), typeof(CarRepository));
 builder.Services.AddScoped(typeof(IBlogRepository), typeof(BlogRepository));
+builder.Services.AddScoped(typeof(ICarPricingRepository), typeof(CarPricingRepository));
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(CommentRepository<>));
+
+
 
 // Handler Sýnýfýlarý
 // About
@@ -49,6 +57,7 @@ builder.Services.AddScoped<UpdateCarCommandHandler>();
 builder.Services.AddScoped<RemoveCarCommandHandler>();
 builder.Services.AddScoped<GetCarWithBrandQueryHandler>();
 builder.Services.AddScoped<GetLast5CarsWithBrandQueryHandler>();
+
 // Category
 builder.Services.AddScoped<GetCategoryQueryHandler>();
 builder.Services.AddScoped<GetCategoryByIdQueryHandler>();

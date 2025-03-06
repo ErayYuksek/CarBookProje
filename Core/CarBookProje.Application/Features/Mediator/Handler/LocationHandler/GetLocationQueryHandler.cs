@@ -11,11 +11,11 @@ using UCarBook.Domain.Entities;
 
 namespace CarBookProje.Application.Features.Mediator.Handler.LocationHandler
 {
-    public class GetLocationQueryHandler : IRequestHandler<GetLocationQuery, List<GetLocationQueryResult>>
+    public class GetTagCloudQueryHandler : IRequestHandler<GetLocationQuery, List<GetLocationQueryResult>>
     {
         private readonly IRepository<Location> _repository;
 
-        public GetLocationQueryHandler(IRepository<Location> repository)
+        public GetTagCloudQueryHandler(IRepository<Location> repository)
         {
             _repository = repository;
         }
