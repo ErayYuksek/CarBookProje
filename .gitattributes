@@ -1,2 +1,6 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+*.cs linguist-detectable=true
+*.csproj linguist-detectable=true
+*.sln linguist-detectable=true
+*.html linguist-vendored
+*.css linguist-vendored
+*.js linguist-vendored
