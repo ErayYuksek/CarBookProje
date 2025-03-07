@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "FqjqZ1u0IgI=",
+  "dgSpecHash": "TFkTsOpOyg4=",
   "success": true,
   "projectFilePath": "C:\\Users\\erayy\\source\\repos\\CarBookProje\\Frontends\\UdemyCarBook.Dto\\UdemyCarBook.Dto.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\erayy\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,5 +1,6 @@
  using CarBookProje.Application.Features.CQRS.Handlers.AboutHandler;
 using CarBookProje.Application.Features.CQRS.Handlers.BannerHandler;
+using CarBookProje.Application.Features.CQRS.Handlers.BrandHandler;
 using CarBookProje.Application.Features.CQRS.Handlers.CarHandler;
 using CarBookProje.Application.Features.CQRS.Handlers.CategoryHandler;
 using CarBookProje.Application.Features.CQRS.Handlers.ContactHandler;
@@ -72,6 +73,15 @@ builder.Services.AddScoped<GetContactByIdQueryHandler>();
 builder.Services.AddScoped<CreateContactCommandHandler>();
 builder.Services.AddScoped<RemoveContactCommandHandler>();
 builder.Services.AddScoped<UpdateContactCommandHandler>();
+//
+// Contact
+
+
+builder.Services.AddScoped<GetBrandQueryHandler>();
+builder.Services.AddScoped<GetBrandByIdQueryHandler>();
+builder.Services.AddScoped<CreateBrandCommandHandler>();
+builder.Services.AddScoped<RemoveBrandCommandHandler>();
+builder.Services.AddScoped<UpdateBrandCommandHandler>();
 //
 builder.Services.AddApplicationService(builder.Configuration);
 
