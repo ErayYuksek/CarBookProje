@@ -4,5 +4,7 @@
 *.html linguist-vendored
 *.css linguist-vendored
 *.js linguist-vendored
-* linguist-detectable
+*.json linguist-vendored
 *.cs linguist-language=C#
+*.razor linguist-language=C#
+*.config linguist-vendored
