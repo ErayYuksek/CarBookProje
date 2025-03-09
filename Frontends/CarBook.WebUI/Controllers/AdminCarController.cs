@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CarBook.WebUI.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.CodeAnalysis;
 using Newtonsoft.Json;
+using System.Diagnostics;
 using System.Text;
 using UdemyCarBook.Dto.BrandDtos;
 using UdemyCarBook.Dto.CarDtos;
@@ -96,7 +99,38 @@ namespace CarBook.WebUI.Controllers
                 return RedirectToAction("Index");
             }
             return View();
-        }   
+        }
+        [HttpGet]
+        public async Task<IActionResult> UpdateCar(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+
+            // API'den markaları çek
+            var responseMessage2 = await client.GetAsync("https://localhost:7000/api/Brand");
+            if (responseMessage2.IsSuccessStatusCode)
+            {
+                var jsonData = await responseMessage2.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<List<ResultBrandDto>>(jsonData);
+
+                // ViewBag içine SelectList olarak ekle (DOĞRU YÖNTEM)
+                ViewBag.Brands = new SelectList(values, "BrandID", "BrandName");
+            }
+
+            // API'den araba verisini çek
+            var responseMessage = await client.GetAsync($"https://localhost:7000/api/Car/{id}");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<UpdateCarDto>(jsonData);
+                return View(values);
+            }
+
+            return View();
+        }
+
+
+
+
 
 
     }

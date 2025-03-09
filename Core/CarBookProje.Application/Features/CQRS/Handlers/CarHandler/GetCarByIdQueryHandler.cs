@@ -22,6 +22,12 @@ namespace CarBookProje.Application.Features.CQRS.Handlers.CarHandler
         public async Task<GetCarByIdQueryResults> Handle(GetCarByIdQuery query)
         {
             var values = await _repository.GetByIdAsync(query.Id);
+
+            if (values == null)
+            {
+                throw new Exception("Araba bilgisi bulunamadı!");
+            }
+
             return new GetCarByIdQueryResults
             {
                 BrandID = values.BrandID,
@@ -34,9 +40,6 @@ namespace CarBookProje.Application.Features.CQRS.Handlers.CarHandler
                 CoverImageUrl = values.CoverImageUrl,
                 BigImageUrl = values.BigImageUrl,
                 CarID = values.CarID
-
-
-
             };
         }
     }
