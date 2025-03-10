@@ -1,9 +1,7 @@
-﻿using CarBook.WebUI.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.CodeAnalysis;
 using Newtonsoft.Json;
-using System.Diagnostics;
 using System.Text;
 using UdemyCarBook.Dto.BrandDtos;
 using UdemyCarBook.Dto.CarDtos;
@@ -129,8 +127,20 @@ namespace CarBook.WebUI.Controllers
         }
 
 
+        [HttpPost]
+        public async Task<IActionResult> UpdateCar(UpdateCarDto updateCarDto)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var jsonData = JsonConvert.SerializeObject(updateCarDto);
+            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var responseMessage = await client.PutAsync("https://localhost:7000/api/Car", stringContent);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+            return View();
 
-
+        }
 
 
     }
