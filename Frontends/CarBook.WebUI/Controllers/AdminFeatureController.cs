@@ -67,27 +67,16 @@ namespace CarBook.WebUI.Controllers
             return View();
         }
         [HttpGet]
-        public async Task<IActionResult> UpdateCar(int id)
+        public async Task<IActionResult> UpdateFeature(int id)
         {
-            var client = _httpClientFactory.CreateClient();
-
-            // API'den markaları çek
-            var responseMessage2 = await client.GetAsync("https://localhost:7000/api/Brand");
-            if (responseMessage2.IsSuccessStatusCode)
-            {
-                var jsonData = await responseMessage2.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ResultBrandDto>>(jsonData);
-
-                // ViewBag içine SelectList olarak ekle (DOĞRU YÖNTEM)
-                ViewBag.Brands = new SelectList(values, "BrandID", "BrandName");
-            }
+            var client = _httpClientFactory.CreateClient();   
 
             // API'den araba verisini çek
-            var responseMessage = await client.GetAsync($"https://localhost:7000/api/Car/{id}");
+            var responseMessage = await client.GetAsync($"ttps://localhost:7000/api/Feature{id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<UpdateCarDto>(jsonData);
+                var values = JsonConvert.DeserializeObject<UpdateFeatureDtos>(jsonData);
                 return View(values);
             }
 
@@ -96,12 +85,12 @@ namespace CarBook.WebUI.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> UpdateCar(UpdateCarDto updateCarDto)
+        public async Task<IActionResult> UpdateCar(UpdateFeatureDtos updateFeatureDtos)
         {
             var client = _httpClientFactory.CreateClient();
-            var jsonData = JsonConvert.SerializeObject(updateCarDto);
+            var jsonData = JsonConvert.SerializeObject(updateFeatureDtos);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PutAsync("https://localhost:7000/api/Car", stringContent);
+            var responseMessage = await client.PutAsync("ttps://localhost:7000/api/Feature", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
