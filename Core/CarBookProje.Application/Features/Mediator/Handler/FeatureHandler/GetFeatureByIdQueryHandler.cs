@@ -19,11 +19,18 @@ namespace CarBook.Application.Features.Mediator.Handlers.FeatureHandlers
         public async Task<GetFeatureByIdQueryResult> Handle(GetFeatureByIdQuery request, CancellationToken cancellationToken)
         {
             var values = await _repository.GetByIdAsync(request.Id);
+
+            if (values == null)
+            {
+                throw new Exception($"ID {request.Id} ile eşleşen bir özellik bulunamadı!");
+            }
+
             return new GetFeatureByIdQueryResult
             {
                 FeatureID = values.FeatureID,
                 Name = values.Name
             };
         }
+
     }
 }

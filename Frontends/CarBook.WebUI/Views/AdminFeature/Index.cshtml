@@ -37,16 +37,13 @@
                                             <th scope="row">@count</th>
                                             <td>@item.Name</td>
 
-                                            <td>
-                                                <a href="/AdminFeature/RemoveFeature/@item.FeatureID" class="btn btn-outline-danger">Remove</a>
-                                            </td>
-                                            <td>
-                                                <a href="/AdminFeature/UpdateFeature/@item.FeatureID" class="btn btn-outline-success">Update</a>
-                                            </td>
+                                            <td><a href="/AdminFeature/RemoveFeature/@item.FeatureID" class="btn btn-danger">Sil</a></td>
+                                            <td><a href="/AdminFeature/UpdateFeature/@item.FeatureID" class="btn btn-secondary">Güncelle</a></td>
                                             <td>
                              
                                         </tr>
                                     }
+                                  
                                 </tbody>
                             </table>
                             <a href="/AdminFeature/CreateFeature" class="btn btn-outline-primary mt-3">Specifications Car</a>

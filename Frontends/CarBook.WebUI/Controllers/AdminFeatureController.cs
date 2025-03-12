@@ -23,10 +23,8 @@ namespace CarBook.WebUI.Controllers
             var responseMessage = await client.GetAsync("https://localhost:7000/api/Feature");
             if (responseMessage.IsSuccessStatusCode)
             {
-
-                var JsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ResultFeatureDto>>(JsonData);
-
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<List<ResultFeatureDto>>(jsonData);
                 return View(values);
             }
             return View();
@@ -36,67 +34,61 @@ namespace CarBook.WebUI.Controllers
         public IActionResult CreateFeature()
         {
             return View();
-
         }
 
-
         [HttpPost]
-        public async Task<IActionResult> CreateFeature(CreateFeatureDtos  createFeatureDto)
+        public async Task<IActionResult> CreateFeature(CreateCarDto createFeatureDto)
         {
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createFeatureDto);
-            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
             var responseMessage = await client.PostAsync("https://localhost:7000/api/Feature", stringContent);
+
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
             }
             return View();
         }
-
 
 
         public async Task<IActionResult> RemoveFeature(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.DeleteAsync($"https://localhost:7000/api/Feature+{id}");
+            var responseMessage = await client.DeleteAsync($"https://localhost:7000/api/Features/{id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
             }
             return View();
         }
+
         [HttpGet]
         public async Task<IActionResult> UpdateFeature(int id)
         {
-            var client = _httpClientFactory.CreateClient();   
-
-            // API'den araba verisini çek
-            var responseMessage = await client.GetAsync($"ttps://localhost:7000/api/Feature{id}");
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync($"https://localhost:7000/api/Feature/{id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<UpdateFeatureDtos>(jsonData);
-                return View(values);
+                var value = JsonConvert.DeserializeObject<UpdateFeatureDtos>(jsonData);
+                return View(value);
             }
-
             return View();
         }
 
-
         [HttpPost]
-        public async Task<IActionResult> UpdateCar(UpdateFeatureDtos updateFeatureDtos)
+        public async Task<IActionResult> UpdateFeature(UpdateFeatureDtos  updateFeatureDto)
         {
             var client = _httpClientFactory.CreateClient();
-            var jsonData = JsonConvert.SerializeObject(updateFeatureDtos);
-            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PutAsync("ttps://localhost:7000/api/Feature", stringContent);
+            var jsonData = JsonConvert.SerializeObject(updateFeatureDto);
+            var stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var responseMessage = await client.PutAsync("https://localhost:7000/api/Feature", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
             }
             return View();
-
         }
 
 
