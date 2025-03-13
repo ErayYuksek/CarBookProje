@@ -56,12 +56,17 @@ namespace CarBook.WebUI.Controllers
         {
             var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.DeleteAsync($"https://localhost:7000/api/Features/{id}");
+
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
             }
-            return View();
+            //return View();
+            // Eğer hata oluşursa, hata mesajıyla Index sayfasına yönlendir
+            TempData["ErrorMessage"] = "Özellik silinemedi, lütfen tekrar deneyin.";
+            return RedirectToAction("Index");
         }
+
 
         [HttpGet]
         public async Task<IActionResult> UpdateFeature(int id)
