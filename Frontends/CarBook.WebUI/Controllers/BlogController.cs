@@ -20,7 +20,7 @@ namespace CarBook.WebUI.Controllers
             ViewBag.v2 = "Blogs of our authors";
          
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7000/api/Blog/GetAllBlogWithAuthorQueryResult");
+            var responseMessage = await client.GetAsync("http://localhost:5216/api/Blog/GetAllBlogWithAuthorQueryResult");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();

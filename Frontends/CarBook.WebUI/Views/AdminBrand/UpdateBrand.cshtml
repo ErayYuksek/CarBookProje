@@ -1,22 +1,25 @@
-﻿@model CreateFeatureDtos
+﻿@model UpdateBrandDto
 @{
-    ViewData["Title"] = "CreateFeature";
+    ViewData["Title"] = "UpdateBrand";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
+
+
 <div class="row">
     <div class="col-xl-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Yeni Özellik Girişi</h4>
-                <p class="card-subtitle mb-4">You can make new feature entries from this page.</p>
+                <h4 class="card-title">New Brand </h4>
+                <p class="card-subtitle mb-4">You can make new Brand entries from this page.</p>
                 <form method="post">
                     <div class="form-group">
+                        <input type="hidden" asp-for="brandID" />
                         <label>Araç Özelliği</label>
                         <input type="text" class="form-control" placeholder="Özellik Giriniz" asp-for="name">
                     </div>
                     <br />
-                    <button type="submit" class="btn btn-primary waves-effect waves-light">Özelliği Kaydet</button>
-                    <a href="/AdminBrand/CreateBrand" class="btn btn-danger waves-effect waves-light">İptal</a>
+                    <button type="submit" class="btn btn-primary waves-effect waves-light">Save</button>
+                    <a href="/AdminFeature/CreateFeature" class="btn btn-danger waves-effect waves-light">Cancel</a>
                 </form>
             </div>
         </div>

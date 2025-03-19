@@ -19,7 +19,7 @@ namespace CarBook.WebUI.ViewComponents.BlogViewComponents
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7000/api/Blog/GetLast3BlogsWithAuthorsList");
+            var responseMessage = await client.GetAsync("http://localhost:5216/api/Blog/GetLast3BlogsWithAuthorsList");
 
             if (responseMessage.IsSuccessStatusCode)
             {

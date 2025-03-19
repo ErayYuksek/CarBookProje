@@ -16,7 +16,7 @@ namespace CarBook.WebUI.ViewComponents.DefaultViewComponents
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var client = _httpclientFactory.CreateClient();
-            var responseMessage =await client.GetAsync("https://localhost:7000/api/Banner");
+            var responseMessage =await client.GetAsync("http://localhost:5216/api/Banner");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData=await responseMessage.Content.ReadAsStringAsync();

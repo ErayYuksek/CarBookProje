@@ -20,11 +20,11 @@ namespace CarBookProje.Application.Features.CQRS.Handlers.BrandHandler
         public async Task<GetBrandByIdQueryResult> Handle(GetBrandByIdQuery query)
         {
             var values = await _repository.GetByIdAsync(query.Id);
-            return new GetBrandByIdQueryResult
+            return values != null ? new GetBrandByIdQueryResult
             {
                 BrandID = values.BrandID,
                 Name = values.BrandName
-            };
+            } : null;
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace UdemyCarBook.Dto.BannerDtos
 {
-    public class ResultBannerDto
+    public class UpdateBannerDto
     {
         [JsonProperty("bannerID")]
         public int BannerID { get; set; }

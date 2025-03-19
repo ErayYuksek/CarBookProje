@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json;  // JSON dönüşümleri için gerekli kütüphane
+﻿using Newtonsoft.Json;  // JSON dönüşümleri için gerekli kütüphane
 
 namespace UdemyCarBook.Dto.BrandDtos
 {
     public class ResultBrandDto
     {
-        [JsonProperty("brandID")]  // JSON'daki "brandID" alanını "BrandID" ile eşleştir
-        public int BrandID { get; set; }
+        [JsonProperty("brandID")]  // API'deki "brandID" ile birebir eşleşmesi için
+        public int brandID { get; set; }
 
-        [JsonProperty("name")]  // JSON'daki "name" alanını "BrandName" ile eşleştir
-        public string BrandName { get; set; }
+        [JsonProperty("name")]  // API'deki "name" ile birebir eşleşmesi için
+        public string? name { get; set; }
     }
+
+
+
 }

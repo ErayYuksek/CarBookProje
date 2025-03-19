@@ -20,7 +20,7 @@ namespace CarBook.WebUI.Controllers
         public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7000/api/Feature");
+            var responseMessage = await client.GetAsync("http://localhost:5216/api/Feature");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
@@ -42,8 +42,7 @@ namespace CarBook.WebUI.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createFeatureDto);
             var stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PostAsync("https://localhost:7000/api/Feature", stringContent);
-
+            var responseMessage = await client.PostAsync("http://localhost:5216/api/Feature", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
@@ -52,27 +51,26 @@ namespace CarBook.WebUI.Controllers
         }
 
 
+
+
+
         public async Task<IActionResult> RemoveFeature(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.DeleteAsync($"https://localhost:7000/api/Features/{id}");
-
+            var responseMessage = await client.DeleteAsync($"http://localhost:5216/api/Feature/{id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
             }
-            //return View();
-            // Eğer hata oluşursa, hata mesajıyla Index sayfasına yönlendir
-            TempData["ErrorMessage"] = "Özellik silinemedi, lütfen tekrar deneyin.";
-            return RedirectToAction("Index");
-        }
 
+            return View();
+        }
 
         [HttpGet]
         public async Task<IActionResult> UpdateFeature(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync($"https://localhost:7000/api/Feature/{id}");
+            var responseMessage = await client.GetAsync($"http://localhost:5216/api/Feature/{id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
@@ -83,19 +81,18 @@ namespace CarBook.WebUI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> UpdateFeature(UpdateFeatureDtos  updateFeatureDto)
+        public async Task<IActionResult> UpdateFeature(UpdateFeatureDtos updateFeatureDto)
         {
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(updateFeatureDto);
             var stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PutAsync("https://localhost:7000/api/Feature", stringContent);
+            var responseMessage = await client.PutAsync("http://localhost:5216/api/Feature", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
             }
             return View();
         }
-
 
     }
 }
