@@ -1,4 +1,5 @@
 ﻿using CarBookProje.Application.Features.RepositoryPattern;
+using CarBookProje.Persistence.Repositories.CommentRepositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using UCarBook.Domain.Entities;
@@ -10,6 +11,7 @@ namespace CarBookProje.WepApi.Controllers
     public class CommentsController : ControllerBase
     {
         private readonly IGenericRepository<Comment> _repository;
+      
 
         public CommentsController(IGenericRepository<Comment> repository)
         {
@@ -53,5 +55,13 @@ namespace CarBookProje.WepApi.Controllers
             var values = _repository.GetById(id);
             return Ok(values);
         }
+
+        [HttpGet("CommentListByBlog")]
+        public IActionResult CommentListByBlog(int id)
+        {
+            var value = _repository.GetCommentsByBlogId(id);
+            return Ok(value);
+        }
+
     }
 }

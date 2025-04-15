@@ -1,4 +1,5 @@
-﻿using CarBookProje.Application.Features.Mediator.Commands.BlogCommand;
+﻿using CarBookProje.Application.Features.Mediator.Commands.AuthorCommand;
+using CarBookProje.Application.Features.Mediator.Commands.BlogCommand;
 using CarBookProje.Application.Features.Mediator.Commands.ServiceCommand;
 using CarBookProje.Application.Features.Mediator.Handler.BlogHandler;
 using CarBookProje.Application.Features.Mediator.Queries.BlogQueries;
@@ -27,7 +28,7 @@ namespace CarBookProje.WepApi.Controllers
             return Ok(values);
         }
 
-        [HttpGet("{id}")]
+        [HttpDelete]
         public async Task<IActionResult> GetBlog(int id)
         {
             var values = await _mediator.Send(new GetBlogByIdQuery(id));
@@ -41,11 +42,11 @@ namespace CarBookProje.WepApi.Controllers
             return Ok("Blog başarıyla eklendi.");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveBlog(int id)
         {
             await _mediator.Send(new RemoveBlogCommand(id));
-            return Ok("Blog başarıyla silindi.");
+            return Ok("Blog başarıyla silindi");
         }
 
         [HttpPut]

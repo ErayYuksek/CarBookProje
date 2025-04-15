@@ -45,7 +45,7 @@ namespace CarBook.WebUI.Controllers
             var responseMessage = await client.PostAsync("http://localhost:5216/api/Feature", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "AdminFeature");
             }
             return View();
         }

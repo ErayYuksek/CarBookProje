@@ -40,4 +40,4 @@ namespace CarBookProje.Application.Features.CQRS.Handlers.CarHandler
 //CreateCarCommand: Kullanıcıdan gelen bilgileri alıyor.
 //Car: Bu bilgilerle bir araba nesnesi oluşturuluyor.
 //Veritabanı: Car nesnesi, _repository.CreateAsync ile veritabanına kaydediliyor.
-//Yani, bu kodun amacı komuttan gelen bilgileri bir Car nesnesine çevirmek ve bunu veritabanına eklemek. 😊
+//Yani, bu kodun amacı komuttan gelen bilgileri bir Car nesnesine çevirmek ve bunu veritabanına eklemek. 

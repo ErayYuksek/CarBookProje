@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using System.Text;
 using UdemyCarBook.Dto.BannerDtos;
-using UdemyCarBook.Dto.BrandDtos;
+using UdemyCarBook.Dto.FeatureDtos;
 
 namespace CarBook.WebUI.Controllers
 {
@@ -47,10 +47,59 @@ namespace CarBook.WebUI.Controllers
 
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("Index"); // Yönlendirme işlemi sonrası
+                return RedirectToAction("Index", "AdminBanner");
             }
             return View(); // Başarısızsa aynı sayfada kal
         }
+
+
+        public async Task<IActionResult> RemoveBanner(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.DeleteAsync($"http://localhost:5216/api/Banner?id={id}");
+
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index", "AdminBanner");
+            }
+            return View();
+
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> UpdateBanner(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync($"http://localhost:5216/api/Banner/{id}");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var value = JsonConvert.DeserializeObject<UpdateBannerDto>(jsonData);
+                return View(value);
+            }
+            return View();
+
+        }
+
+
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateBanner(UpdateBannerDto updatebannerDto)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var jsonData = JsonConvert.SerializeObject(updatebannerDto);
+            var stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var responseMessage = await client.PutAsync("http://localhost:5216/api/Banner", stringContent);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+
+
+
+
 
     }
 }
