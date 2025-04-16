@@ -27,7 +27,7 @@ namespace CarBook.WebUI.Controllers
             return View();
         }
 
-
+  
 
         public async Task<IActionResult> RemoveBlog(int id)
         {

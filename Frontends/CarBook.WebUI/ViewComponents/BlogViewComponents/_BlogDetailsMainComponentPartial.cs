@@ -16,14 +16,18 @@ namespace UdemyCarBook.WebUI.ViewComponents.BlogViewComponents
         public async Task<IViewComponentResult> InvokeAsync(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync($"http://localhost:5216/api/Blog/"+ id);
+            var responseMessage = await client.GetAsync($"http://localhost:5216/api/Blog/{id}");
+
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<GetBlogById>(jsonData);
                 return View(values);
             }
-            return View();
+
+            // 🔒 NULL yerine boş bir model gönder:
+            return View(new GetBlogById());
         }
+
     }
 }
