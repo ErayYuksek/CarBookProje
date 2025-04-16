@@ -13,12 +13,12 @@
                 <h4 class="card-title">Yorum Listesi Blog ID:@ViewBag.v</h4>
                 <p class="card-subtitle mb-4">Bloglarla ilgili Yorum işlemlerini  buradan gerçekleştirebilirsiniz. </p>
 
-                @foreach (var item in Model)
+               @foreach (var item in Model)
                 {
                     count++;
                     <div class="col-md-12">
                         <div class="card">
-                            <h5 class="card-header">Yorum @count</h5>
+                    <h5 class="card-header">Yorum @count</h5> 
                             <div class="card-body">
                                 <h4 class="card-title">Special title treatment</h4>
                                 <p class="card-text">
@@ -30,7 +30,7 @@
                         </div>
                     </div>
 
-                }
+                } 
 
             </div>
         </div>
